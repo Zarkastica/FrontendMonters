@@ -1,0 +1,52 @@
+      <header>
+        <ul class="nav justify-content-center">
+          <li class="contenedor-imagen"> 
+            <img src="/MONSTERS-removebg-preview.png" alt="Monsters logo" width="300px">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <button class="boton1">Categorías</button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <button class="boton2">Accesorios</button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <button class="boton3">Promociones</button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-disabled="true">
+              <input type="text" placeholder="Busca tu disfraz">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <button class="boton4">
+                <img src="/carrito-removebg-preview.png" style="width: 3rem"alt="carrito de mercado">
+              </button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              @if (!logged) {
+                <button (click)="logged=true" class="botonLogin">LOGIN
+                  <img src="/login.png" style="width: 3rem"alt="login">
+                </button>
+              } @else {
+                <p>Bienvenido Admin</p>
+                <a routerLink="/tienda" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <button class="botonProductos">
+                  Inventario
+                </button>
+                </a>
+              }
+            </a>
+          </li>
+        </ul>
+      </header>
+
+
